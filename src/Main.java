@@ -22,6 +22,15 @@ public class Main{
         }
         return max;
     }
+
+    // A swapping method
+
+    public static void swap(int a, int b){
+        int temp = a;
+        a= b;
+        b=temp;
+        System.out.println(a+" "+b);
+    }
     public static void main(String [] args){
         // if we want to add a range of number, instead of writing the same code again and again, we
         // can create a method and reuse it easily
@@ -33,5 +42,11 @@ public class Main{
         int b = kbd.nextInt();
 
         System.out.println("The sum of number from " + a + " to " + b + " is "  + sum(a, b)); // sum(a, b) is called calling a method
+
+        swap(a, b);
+        // even after a and b are swapped, their value is still the same in main.
+        //the variables in the method die when the method call ends
+        System.out.println(a);
+        System.out.println(b);
     }
 }
